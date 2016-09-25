@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion "24.0.0"
+    compileSdkVersion 23
+    buildToolsVersion "23"
 
     defaultConfig {
         applicationId "com.acabezas.buildflavorsdemoapp"
         minSdkVersion 19
-        targetSdkVersion 24
+        targetSdkVersion 23
         versionCode 1
         versionName "1.0"
     }
@@ -15,6 +15,17 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+        flavor1 {
+            applicationId "com.acabezas.flavor1"
+        }
+        flavor2 {
+            applicationId "com.acabezas.flavor2"
+        }
+        flavor3 {
+            applicationId "com.acabezas.flavor3"
         }
     }
 }
